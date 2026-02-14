@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Suchisman… This Is For You ❤️</title>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', serif;
+  background: linear-gradient(to bottom right, #ff758c, #ff7eb3);
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.container {
+  padding: 60px 20px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+p {
+  font-size: 20px;
+  max-width: 700px;
+  margin: 20px auto;
+  line-height: 1.6;
+}
+
+button {
+  padding: 15px 35px;
+  font-size: 20px;
+  border: none;
+  border-radius: 40px;
+  background-color: white;
+  color: #ff4d6d;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+.hidden {
+  display: none;
+  margin-top: 30px;
+}
+
+.heart {
+  position: fixed;
+  color: red;
+  font-size: 24px;
+  animation: float 4s linear infinite;
+}
+
+@keyframes float {
+  0% {transform: translateY(0);}
+  100% {transform: translateY(-800px);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h1>Suchisman Mukherjee ❤️</h1>
+
+<p>
+It has been 4 months…  
+Since 5th October.  
+The day my heart quietly chose you.
+</p>
+
+<p>
+In just four months, you became my comfort,  
+my safest place,  
+my happiest notification,  
+and the one person I never want to lose.
+</p>
+
+<p>
+You don’t even realize how deeply you matter to me.  
+How much calmer my world feels because you exist in it.
+</p>
+
+<button onclick="reveal()">Click Here… Only If You’re Ready ❤️</button>
+
+<div id="message" class="hidden">
+<p>
+I don’t want just memories with you…  
+I want a future.  
+More months. More laughter. More “us”.
+</p>
+
+<h2>Will you be my Valentine? ❤️</h2>
+
+<button onclick="yesLove()">Yes ❤️</button>
+</div>
+
+<div id="final" class="hidden">
+<h2>You just made me the happiest person alive 🥹❤️</h2>
+<p>
+From October 5th… to every 14th February…  
+I choose you. Again. And again. And again.
+</p>
+</div>
+
+</div>
+
+<script>
+function reveal() {
+  document.getElementById("message").style.display = "block";
+}
+
+function yesLove() {
+  document.getElementById("final").style.display = "block";
+  createHearts();
+}
+
+function createHearts() {
+  setInterval(function(){
+    var heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * window.innerWidth + "px";
+    heart.style.top = "100%";
+    document.body.appendChild(heart);
+
+    setTimeout(function(){
+      heart.remove();
+    },4000);
+  },300);
+}
+</script>
+
+</body>
+</html>
